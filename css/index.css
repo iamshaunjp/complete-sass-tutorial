@@ -36,6 +36,7 @@ img {
   padding: 0.75rem;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 .card .card-title {
   font-size: 1rem;
