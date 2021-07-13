@@ -5,9 +5,9 @@ $grid-gaps: (
   "0": 0,
   "1": 10px,
   "2": 20px,
-  "3": 30px
+  "3": 30px,
 );
-$layout-values: start, end, center, space-between, space-around;
+$layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // base layout classes
 .container {
@@ -25,7 +25,7 @@ $layout-values: start, end, center, space-between, space-around;
 // grid gaps
 @each $key, $val in $grid-gaps {
   .gap-#{$key} > * {
-    padding: $val
+    padding: $val;
   }
   .gap-#{$key} {
     margin-left: -$val;
@@ -33,13 +33,10 @@ $layout-values: start, end, center, space-between, space-around;
   }
 }
 
-// justify & align values
+// justify content classes
 @each $val in $layout-values {
   .justify-#{$val} {
     justify-content: $val;
-  }
-  .align-#{$val} {
-    align-items: $val;
   }
 }
 
@@ -53,7 +50,6 @@ $layout-values: start, end, center, space-between, space-around;
     }
   }
 }
-
 @include sm {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-sm {
@@ -63,7 +59,6 @@ $layout-values: start, end, center, space-between, space-around;
     }
   }
 }
-
 @include md {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-md {
@@ -73,7 +68,6 @@ $layout-values: start, end, center, space-between, space-around;
     }
   }
 }
-
 @include lg {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-lg {
@@ -83,7 +77,6 @@ $layout-values: start, end, center, space-between, space-around;
     }
   }
 }
-
 @include xl {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {
